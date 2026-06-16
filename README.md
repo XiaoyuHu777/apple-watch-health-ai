@@ -78,6 +78,9 @@ apple-watch-health-ai/
 │   ├── raw/
 │   ├── processed/
 │   └── README.md
+├── examples/
+│   ├── README.md
+│   └── synthetic/
 ├── notebooks/
 │   ├── 01_explore_export_xml.ipynb
 │   ├── 02_daily_health_features.ipynb
@@ -91,9 +94,11 @@ apple-watch-health-ai/
 │   ├── ml_features.py
 │   ├── train_recovery_ml.py
 │   ├── plot_ml_results.py
+│   ├── generate_demo_assets.py
 │   ├── visualize.py
 │   └── utils.py
 └── reports/
+    ├── demo_figures/
     └── figures/
 ```
 
@@ -113,6 +118,29 @@ Apple Health export data is sensitive personal data.
 
 The repository is intended to contain source code, documentation, notebooks
 without executed outputs, and non-sensitive aggregate metric summaries only.
+
+## Public Demo Artifacts
+
+The repository includes a synthetic public demo under `examples/synthetic/` and
+`reports/demo_figures/`. These files are generated from artificial data with a
+fixed random seed. They are not derived from Apple Health exports or personal
+health records.
+
+Regenerate the public demo artifacts with:
+
+```bash
+python src/generate_demo_assets.py
+```
+
+Demo figures:
+
+![Synthetic recovery trend](reports/demo_figures/demo_recovery_trend.png)
+
+![Synthetic predicted vs actual recovery](reports/demo_figures/ml_predicted_vs_actual.png)
+
+![Synthetic ML prediction timeline](reports/demo_figures/ml_recovery_prediction_timeline.png)
+
+![Synthetic feature importance](reports/demo_figures/ml_feature_importance.png)
 
 ## Environment Setup
 
