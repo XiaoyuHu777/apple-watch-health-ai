@@ -1,0 +1,31 @@
+# Sensitive health data
+data/raw/
+data/processed/
+apple_health_export/
+*.xml
+*.zip
+
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+
+# Virtual environments and local configuration
+.venv/
+venv/
+.env
+
+# Jupyter
+.ipynb_checkpoints/
+
+# Generated reports
+reports/figures/*
+reports/ml_predictions.csv
+
+# OS and editor files
+.DS_Store
+.idea/
+.vscode/
